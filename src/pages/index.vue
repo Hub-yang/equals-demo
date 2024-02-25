@@ -37,6 +37,26 @@ function onBoxMouseEnter() {
         </div>
       </div>
     </div>
+    <div ml-2 flex flex-col gap-2>
+      <div flex items-center justify-start gap-2>
+        <div h-7 w-7 flex-center border-2 border-color-gray:50 rounded-1 bg-gray:10 text-3>
+          <span i-ic:round-not-equal />
+        </div>
+        <span text-sm font-bold>不相等</span>
+      </div>
+      <div flex items-center justify-start gap-2>
+        <div h-7 w-7 flex-center border-2 border-color-gray rounded-1 bg-gray:50 text-3>
+          <span i-mdi:approximately-equal />
+        </div>
+        <span text-sm font-bold>宽松相等</span>
+      </div>
+      <div flex items-center justify-start gap-2>
+        <div h-7 w-7 flex-center border-2 border-color-black rounded-1 bg-black:50 text-4.5>
+          <span i-ic:round-equals />
+        </div>
+        <span text-sm font-bold>严格相等</span>
+      </div>
+    </div>
   </div>
 </template>
 

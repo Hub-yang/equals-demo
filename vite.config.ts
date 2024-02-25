@@ -51,18 +51,12 @@ export default defineConfig({
       ],
       vueTemplate: true,
     }),
-
-    // https://github.com/antfu/vite-plugin-components
     Components({
       dts: true,
     }),
-
-    // https://github.com/antfu/unocss
-    // see uno.config.ts for config
     UnoCSS(),
   ],
 
-  // https://github.com/vitest-dev/vitest
   test: {
     environment: 'jsdom',
   },
