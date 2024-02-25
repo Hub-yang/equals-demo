@@ -20,6 +20,8 @@
   "devDependencies": {
     "@antfu/eslint-config": "^2.6.3",
     "@iconify-json/carbon": "^1.1.28",
+    "@iconify-json/ic": "^1.1.17",
+    "@iconify-json/mdi": "^1.1.64",
     "@types/node": "^20.11.5",
     "@unocss/eslint-config": "^0.58.3",
     "@unocss/eslint-plugin": "^0.58.3",

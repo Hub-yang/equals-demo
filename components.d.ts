@@ -7,10 +7,13 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Block: typeof import('./src/components/Block.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Table: typeof import('./src/components/Table.vue')['default']
     TheCounter: typeof import('./src/components/TheCounter.vue')['default']
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     TheInput: typeof import('./src/components/TheInput.vue')['default']
+    ValueRow: typeof import('./src/components/ValueRow.vue')['default']
   }
 }

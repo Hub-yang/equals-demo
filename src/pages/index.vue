@@ -1,23 +1,53 @@
 <script setup lang='ts'>
-interface Block { x: number, y: number }
-const cellList = ref<Block[][]>([])
+const { main, horizontalTop, horizontalWidth, verticalleft, verticalHeight } = useGuidesStyle()
+const currentX = ref()
+const currentY = ref()
 
-// const xValue = ref<string[]>([
+function onMouseEnter(x: number, y: number) {
+  currentX.value = x
+  currentY.value = y
+}
 
-// ])
-// const yValue = ref<string[]>([])
+const isGuideLineShow = ref(false)
+function onBoxMouseLeave() {
+  isGuideLineShow.value = false
+}
 
-cellList.value = Array.from({ length: 21 }, (_, x) => Array.from({ length: 21 }, (_, y) => ({ x, y })))
+function onBoxMouseEnter() {
+  isGuideLineShow.value = true
+}
 </script>
 
 <template>
-  <div flex="~" h-full w-full items-center justify-center bg-gray:10>
-    <div h-200 w-200 rounded-2>
-      <div v-for="(row, y) in cellList" :key="y" ma w-max flex items-center justify-center>
-        <div v-for="(block, x) in row" :key="x" border=".5 gray-400/10" m=".5" min-h-9 min-w-9 flex items-center justify-center bg="gray-500/10" text-2 hover:bg="gray-500/50">
-          {{ block.x }}-{{ block.y }}
+  <div class="h-full w-full flex-center overflow-auto bg-gray:10 font-mono">
+    <div flex flex-col items-end>
+      <div flex>
+        <ValueRow :value="xValue" row-type="x" :current-idx="currentX" />
+      </div>
+      <div flex>
+        <div>
+          <ValueRow :value="yValue" row-type="y" :current-idx="currentY" />
+        </div>
+        <div ref="main" relative @mouseenter="onBoxMouseEnter" @mouseleave="onBoxMouseLeave">
+          <TransitionGroup>
+            <div v-if="isGuideLineShow" :style="{ top: horizontalTop, width: horizontalWidth }" display-none pointer-events-none absolute left-0 right-0 h-.5 bg-red />
+            <div v-if="isGuideLineShow" :style="{ left: verticalleft, height: verticalHeight }" display-none pointer-events-none absolute bottom-0 top-0 w-.5 bg-red />
+          </TransitionGroup>
+          <Table @on-mouse-enter="onMouseEnter" />
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<style scoped>
+.v-enter-active,
+.v-leave-active {
+  transition: opacity 0.8s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+</style>
