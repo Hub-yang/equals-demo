@@ -3,5 +3,5 @@
 </p>
 
 <h6 align='center'>
-<a href="https://vitesse-lite.netlify.app/">在线 Demo</a>
+<a href="https://js-equals-demo.netlify.app/">在线 Demo</a>
 </h6>
