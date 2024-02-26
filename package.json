@@ -1,7 +1,15 @@
 {
+  "name": "js-equals-demo",
   "type": "module",
+  "version": "1.0.0",
   "private": true,
   "packageManager": "pnpm@8.14.3",
+  "description": "It's a two-dimensional chart demo to describe equality comparisons of common data types in JavaScript",
+  "author": "HuberyYang <mochenghualeishuai@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alfred-Skyblue/vue-draggable-plus"
+  },
   "scripts": {
     "build": "vite build",
     "dev": "vite --port 3333 --open",
