@@ -19,8 +19,8 @@ function onBoxMouseEnter() {
 </script>
 
 <template>
-  <div class="h-full w-full flex-center overflow-auto bg-gray:10 font-mono">
-    <div flex flex-col items-end>
+  <div class="min-h-100vh min-w-100vw flex-center overflow-auto bg-gray:10 font-mono">
+    <div min-w-240 flex flex-col items-end>
       <div flex>
         <ValueRow :value="xValue" row-type="x" :current-idx="currentX" />
       </div>
@@ -37,7 +37,7 @@ function onBoxMouseEnter() {
         </div>
       </div>
     </div>
-    <div ml-2 flex flex-col gap-2>
+    <div ml-2 min-w-30 flex flex-col gap-2>
       <div flex items-center justify-start gap-2>
         <div h-7 w-7 flex-center border-2 border-color-gray:50 rounded-1 bg-gray:10 text-3>
           <span i-ic:round-not-equal />
