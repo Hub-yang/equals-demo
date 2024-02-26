@@ -5,7 +5,8 @@ const props = defineProps(['value', 'rowType', 'currentIdx'])
 const value = toValue(props.value)
 function getActiveClass(i: number) {
   let classList = ''
-  props.rowType === 'x' && (classList += 'rotate-90 ')
+  props.rowType === 'x' && (classList += 'vertical-text h-25 w-8')
+  props.rowType === 'y' && (classList += 'h-8 w-25 ')
   props.currentIdx === i && (classList += 'text-red text-4')
   return classList
 }
