@@ -7,7 +7,7 @@ async function handleStar() {
     return
   const repoOwner = 'Hub-yang'
   const repoName = 'equals-demo'
-  const accessToken = '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'
+  const accessToken = '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'
   const octokit = new Octokit({
     auth: accessToken,
   })

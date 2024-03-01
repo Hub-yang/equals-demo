@@ -1,4 +1,4 @@
-<p align='center'>˝
+<p align='center'>
   js中常见数据的相等比较
 </p>
 <p align='center'>
