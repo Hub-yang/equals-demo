@@ -19,7 +19,7 @@ function onBoxMouseEnter() {
 </script>
 
 <template>
-  <div class="min-h-100vh min-w-100vw flex-center overflow-auto bg-gray:10 font-mono">
+  <div class="h-full flex-center overflow-auto font-mono">
     <div min-w-240 flex flex-col items-end>
       <div flex>
         <ValueRow :value="xValue" row-type="x" :current-idx="currentX" />
