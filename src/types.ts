@@ -1,4 +1,7 @@
-export interface Block { x: number, y: number }
+export interface BlockState {
+  x: number
+  y: number
+}
 
 export type Value = (true
   | false

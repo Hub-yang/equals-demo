@@ -6,11 +6,23 @@ export function useGuidesStyle() {
   const horizontalWidth = computed(() => `${x.value - left.value}px`)
   const verticalleft = computed(() => `${x.value - left.value}px`)
   const verticalHeight = computed(() => `${y.value - top.value}px`)
+
+  const isGuideLineShow = ref(false)
+  function onBoxMouseLeave() {
+    isGuideLineShow.value = false
+  }
+
+  function onBoxMouseEnter() {
+    isGuideLineShow.value = true
+  }
   return {
     main,
     horizontalTop,
     horizontalWidth,
     verticalleft,
     verticalHeight,
+    isGuideLineShow,
+    onBoxMouseEnter,
+    onBoxMouseLeave,
   }
 }
