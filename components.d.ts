@@ -9,11 +9,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    'Span>': typeof import('./src/components/<span v-for="(value
     TheFooter: typeof import('./src/components/TheFooter.vue')['default']
     ValueBlock: typeof import('./src/components/ValueBlock.vue')['default']
     ValueTable: typeof import('./src/components/ValueTable.vue')['default']
-    ValueText: typeof import('./src/components/ValueText.vue')['default']
-    ValueTitle: typeof import('./src/components/ValueTitle.vue')['default']
   }
 }
