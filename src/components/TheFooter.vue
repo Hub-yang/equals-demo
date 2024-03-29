@@ -6,7 +6,7 @@
 
     <a
       i-carbon-logo-github
-      href="https://github.com/Hub-yang/my-vue-dev-template"
+      href="https://github.com/Hub-yang/equals-demo"
       target="_blank"
       title="GitHub"
     />
