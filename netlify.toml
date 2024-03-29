@@ -1,9 +1,10 @@
 [build]
 publish = "dist"
-command = "pnpm run build"
+command = "npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [build.environment]
-NODE_VERSION = "20"
+NPM_FLAGS = "--version"
+NODE_VERSION = "16"
 
 [[redirects]]
 from = "/*"
