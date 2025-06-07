@@ -44,8 +44,8 @@ function onBlockMouseEnter(x: number, y: number) {
       </div>
       <div ref="main" relative w-fit @mouseenter="onBoxMouseEnter" @mouseleave="onBoxMouseLeave">
         <TransitionGroup>
-          <div v-if="isGuideLineShow" :style="{ top: horizontalTop, width: horizontalWidth }" display-none pointer-events-none absolute left-0 right-0 h-.5 bg-red />
-          <div v-if="isGuideLineShow" :style="{ left: verticalleft, height: verticalHeight }" display-none pointer-events-none absolute bottom-0 top-0 w-.5 bg-red />
+          <div v-if="isGuideLineShow" :style="{ top: horizontalTop, width: horizontalWidth }" display-none pointer-events-none absolute left-0 right-0 z-10 h-.5 bg-red />
+          <div v-if="isGuideLineShow" :style="{ left: verticalleft, height: verticalHeight }" display-none pointer-events-none absolute bottom-0 top-0 z-10 w-.5 bg-red />
         </TransitionGroup>
         <div w-fit overflow-auto>
           <div v-for="(row, y) in state" :key="y" ma w-max flex items-center justify-center>
