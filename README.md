@@ -7,5 +7,5 @@
 </h5>
 
 <h5 align='center'>
-<a href="https://js-equals-demo.netlify.app/">Live Demo</a> | <a href="https://js-equals-demo.netlify.app/">在线演示</a>
+<a href="https://huberyyang.site:88/">Live Demo</a> | <a href="https://huberyyang.site:88/">在线演示</a>
 </h5>
